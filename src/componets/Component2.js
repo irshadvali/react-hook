@@ -10,7 +10,7 @@ const Component2 = ({ text }) => {
 						<div>
 							<div>{value.text}</div>
                             <button onClick={()=>{
-                               value.showAlert("Irshad Vali") 
+                               value.showAlert("Irshad Vali shaikh") 
                             }}>Click me</button>
 						</div>
 					);
