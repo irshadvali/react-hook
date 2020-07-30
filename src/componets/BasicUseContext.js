@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
-import Component1 from './Component1';
-import { ContextProvider } from '../context/context';
-function BasicUseContext() {
+import React, { useContext } from 'react';
+import notificationContext from './../context/NotificationContext';
 
-  const showAlert=(text)=>{
-        alert(`hi ${text}`)
-    }
+function BasicUseContext() {
+	const { showAlert } = useContext(notificationContext);
 	return (
-		<ContextProvider value={{ text: 'vali irshad',showAlert }}>
-			<div>
-				<Component1 />
-			</div>
-		</ContextProvider>
+		<div>
+			<button
+				onClick={() => {
+					showAlert('Now showing Alert');
+				}}
+			>
+				Show Alert
+			</button>
+		</div>
 	);
 }
 
